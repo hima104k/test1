@@ -1,0 +1,116 @@
+Firewalls are main devices used for network security in any networks. 
+Firewall works like a barrier between own network and internet or WAN. 
+Firewall may be any hardware or software or both. 
+Generally three tasks done by any firewall accept, reject and drop. 
+Accept : To allow the traffic.
+Reject  : To block the traffic with reply 'host is unreachable'.
+Drop    : To block the traffic with no reply. 
+The next generation firewall can detect the threats on the basis of data behaviour. Next Generation Firewall have some built in features like antivirus and malware detection system. These additional feature allow the Next Generation Firewall to keep update time to time. The data and devices can be made secure by installing a next generation firewall instead of traditional firewall. 
+
+IPS(Intrusion Prevention System):
+It detects and prevents identified threats. 
+It uses a signature based technology to detect network intrusions.
+For ex: If the traffic represents a known threat in database, the ips will shut the threat out & not deliver any malicious packets.
+
+Spine Leaf Architecture:
+To overcome limitations of 3 tier we use this spine leaf architecture.
+It has two parts spine and leaf.
+Spine: This is North South bound connection i.e make easy to connect new device & all devices is connected to all down link device.
+Leaf :  It is connected to end devices.
+
+WAN(Wide Area Network):
+WAN is a collection of network LANs and other networks can communicate with one another.
+WAN Topologies : four
+Point to point
+Hub and spoke topology
+Full mesh topology
+Dual multi homed topology
+
+SOHO network:
+SOHO is the abbreviation for Small Office/Home Office network. A SOHO network can be a small wired Ethernet LAN or made of both wired and wireless computers.
+Typically, SOHO networks consists of less than 10 computers. Network service servers like DNS server, email server, web server etc are typically configured outside SOHO network.
+
+SSID (service set identifier):
+It is the primary name associated with an 802.11 wireless local area network (WLAN), including home networks and public hotspots.
+Client devices use this name to identify and join wireless networks. In simple terms it's the name of your Wi-Fi network. The SSID is a case-sensitive text string that is as long as 32 characters consisting of letters and numbers.
+
+RF(Radio Frequency):
+Radio frequency propagates through space with different behaviors: reflection, absorption, refraction, diffraction and scattering.
+Reflection : RF signals bounce to another direction when they hit reflecting materials that are larger than the wave  i.e. metals; reflection highly occurs in indoor WLAN deployments.
+Absorption : Occurs when RF signals are converted to heat and absorbed by certain materials, such as concrete or water.
+Refraction  : RF signals change direction when they pass through a material with a different density; refraction mainly occurs in outdoor WLAN deployments, which are affected by changes in atmospheric conditions and air temperatures.  Most materials will absorb some amount of RF signal as it is traveling between the antenna and the user device. Drywall absorbs a relatively small amount of signal while brick or concrete will absorb a significant amount of signal.
+Diffraction : RF waves change direction when they move around an object of a certain size, shape or material.
+Scattering : It can be intended as “many reflections of the RF wave”, and occurs when the wavelength of the RF signal is larger that the one of the medium/material/object the signal is passing through.
+
+Encryption:
+Wireless encryption secures your wireless network with an authentication protocol. It requires a password or network key when a user or device tries to connect. If your wireless network isn’t secure, unauthorized users could access your network and obtain personal information or use your internet connection for malicious or illegal activity. Your network speed or performance may decrease if people use your network without your knowledge.
+
+MAC learning :
+To switch frames between LAN ports efficiently, the switch maintains an address table called the MAC table.
+When the switch receives a frame, it associates the  MAC address of the sending network device with the LAN port on which it was received.
+MAC address learning is enabled on all VLANs by default.
+The switch dynamically builds the address table by using the MAC source address of the  received frames.
+When the switch receives a frame for a MAC destination address not listed in its address table, it floods the frame to all LAN ports of the same VLAN except the port that received the frame.
+When the destination station replies, the switch adds its relevant MAC source address and port ID to the address table.
+The switch then forwards subsequent frames to a single LAN port without flooding all LAN ports.
+
+ MAC aging :
+To keep the entries in the MAC address table up to date, switch uses an aging mechanism.
+The MAC aging time specifies the time before an entry ages and is discarded from the MAC address table.
+The range is from 0 to 1000000; the default is 300 seconds.
+Entering the value 0 disables the MAC aging.
+If a VLAN is not specified, the aging specification applies to all VLANs.
+
+Frame switching :
+The switches consult the mac-address table when making switching decisions on individual frames.
+LAN switches are characterized by the forwarding method that they support, such as a store-and-forward switch, cut-through switch, or fragment-free switch.
+Store-and-forward :- switches store the entire frame in internal memory and check the frame for errors before forwarding the frame to its destination.
+It's operation ensures a high level of error-free network traffic, because bad data frames are discarded rather than forwarded across the network
+Cut-through switching :- The LAN switch copies into its memory only the destination MAC address, which is located in the first 6 bytes of the frame following the preamble.
+The switch looks up the destination MAC address in its switching table, determines the outgoing interface port, and forwards the frame on to its destination through the designated switch port.
+A cut-through switch reduces delay because the switch begins to forward the frame as soon as it reads the destination MAC address and determines the outgoing switch port
+Fragment-free switching :- It works like cut-through switching with the exception that a switch in fragment-free mode stores the first 64 bytes of the frame before forwarding.
+The reason fragment-free switching stores only the first 64 bytes of the frame is that most network errors and collisions occur during the first 64 bytes of a frame.
+
+Frame flooding :
+Switches determine which port a frame must be sent out to reach its destination
+If there is no match for the destination frame, the switch floods the frame out all ports.
+If the address is known, the frame is forwarded only on that port
+If the layer 2 MAC address is unknown, the frame is flooded to all ports except the one from which it originated
+
+MAC address table :
+It is also called a Content Address Table(CAM) , is used on ethernet switches to determine where to forward traffic on a LAN.
+A MAC address table is made up of the following columns:
+ .VLAN
+ .MAC address
+ .Type (dynamic or static)
+ .Ports
+
+Server:
+It is a software component or dedicated hardware that can accept requests from multiple clients and providing suitable responses after processing their request.
+A server is a centralized machine.
+There are various types of servers like application, database, DNS, mail, web and file server that are committed to a sepicific task. 
+
+Endpoint:
+It is an remote computing device that communicates back and forth with a network to which it is connected.
+Ex: laptops, desktop, mobile etc.
+
+IPV6 Address Types: 3
+Unicast : It is used to describe communication  where a piece of information is sent from one point to another point.
+It represents single interface.
+Ex: Browsing a server.
+It has again 3 types: Global, Unique/Site local, Link local.
+Multicast : It is used to describe communication  where a piece of information is sent from one point to set of other points.
+Multicast addresses identify a group of interfaces in such a way that a packet sent to a multicast address is delivered to all of the interfaces in the group.
+Ex: Tv channels.
+Any cast: Anycast addresses identify a set of interfaces in such a way that a packet sent to an anycast address is delivered to a member of the set.
+Mulicast modified EUI-64 (Extended Unique Identifier) : It is a method we can use to automatically configure IPv6 host addresses. An IPv6 device will use the MAC address of its interface to generate a unique 64-bit interface ID. However, a MAC address is 48 bit and the interface ID is 64 bit. 
+To fill the missing bits:
+We take the MAC address and split it into two pieces.
+We insert “FFFE” in between the two pieces so that we have a 64 bit value.
+We invert the 7th bit of the interface ID.
+
+Verify IP parameters for Clients OS: 
+Windows : Click on command prompt, Type ifconfig
+MAC : Click on Wi-Fi menu button, Next open network interface, select your network, click on advanced button, click on TCP/IP tab.
+Linux : Right click on desktop, next open terminal, type ipconfig.
